@@ -169,20 +169,115 @@ img {
 
 
 
-/* Navigation for mobile devices */
-@media screen and (max-width:1150px) {
-    .nav__menu{
-        position: fixed;
-        width: 100%;
-        top: -120%;
-        left: 0;
-        padding-block: 4.5rem 3.5rem;
-        box-shadow: var(--box-shadow);
-        z-index: var(--z-fixed);
-        background-color: var(--body-color);
-    }
 
+/* Navigation for mobile devices */
+@media screen and (max-width: 569px) {
+  .nav__menu {
+    position: fixed;
+    width: 100%;
+    top: -120%; /* Hidden by default */
+    left: 0;
+    padding-block: 4.5rem 3.5rem;
+    box-shadow: var(--box-shadow);
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+    transition: top 0.3s ease-in-out; /* Smooth transition */
+  }
+
+  .show-menu {
+    top: 0; /* Visible when the menu is active */
+  }
+  .header {
+    box-shadow: var(--box-shadow);
+  }
 }
+
+@media screen and (min-width: 569px) and (max-width: 769px) {
+  .nav__close {
+    display: none;
+  }
+  .nav__toggle {
+    display: none;
+  }
+
+
+  .nav__logo{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 4rem;
+    scale: 2;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    box-shadow: var(--box-shadow);
+    height: 6rem;
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: row !important;
+  }
+}
+
+.nav__list {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.nav__link {
+  font-family: var(--second-font);
+  position: relative;
+}
+
+.nav__link::after {
+  content: "";
+  height: 3px;
+  width: 0%;
+  background-color: var(--first-color);
+  position: absolute;
+  left: 0;
+  bottom: -0.3rem;
+}
+
+.nav__link:hover::after {
+  width: 100%;
+  transition: 300ms;
+}
+
+.nav__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+
+@media screen and (min-width: 769px) {
+  .nav__logo{
+    scale: 1.7;
+  }
+  .header{
+    box-shadow: var(--box-shadow);
+  }
+
+  .nav__list {
+      display: flex;
+      flex-direction: row !important;
+  }
+
+  .nav__close {
+      display: none;
+  }
+
+  .nav__toggle {
+      display: none;
+  }
+}
+
 
 .nav__list{
   text-align: center;
