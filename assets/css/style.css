@@ -110,8 +110,8 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1120px;
-  margin-inline: 1.5rem;
+  max-width: 1120px !important;
+  margin-inline: 1.5rem !important;
 }
 
 .grid {
@@ -133,6 +133,10 @@ img {
 }
 
 /*=============== HEADER & NAV ===============*/
+
+.wrapper{
+  padding: 1.5rem;
+}
 
 .header {
     position: fixed;
@@ -185,31 +189,17 @@ img {
     transition: top 0.3s ease-in-out; /* Smooth transition */
   }
 
-  .home__section{
-    padding-block: .1px 1rem !important;
-    row-gap: 2rem!important;
-    scale: .95;
-  }
-  .home__images{
-    scale: .8;
-    margin-bottom: 25rem;
-  }
   .show-menu {
     top: 0; /* Visible when the menu is active */
   }
-  .header {
-    box-shadow: var(--box-shadow);
-  }
+
 }
 
 @media screen and (min-width: 569px) and (max-width: 769px) {
   .nav__close {
     display: none;
   }
-  .home__section{
-    padding-block: 2rem 3rem !important;
-    row-gap: 7rem !important;
-  }
+ 
   .nav__toggle {
     display: none;
   }
@@ -230,7 +220,6 @@ img {
     align-items: center;
   }
   .header {
-    box-shadow: var(--box-shadow);
     height: 6rem;
   }
   .nav__list {
@@ -243,10 +232,10 @@ img {
   .nav__logo{
     scale: 1.7;
   }
-  .header{
-    box-shadow: var(--box-shadow);
-  }
 
+  .home__section{
+    margin-top: 2rem;
+  }
   .nav__list {
       display: flex;
       flex-direction: row !important;
@@ -273,6 +262,7 @@ img {
   font-family: var(--second-font);
   position: relative;
 }
+
 
 .nav__link::after {
   content: "";
@@ -360,7 +350,7 @@ img {
 
 /*=============== HOME ===============*/
 .home__section{
-  padding-block: 7rem 4rem;
+  padding-block: 2rem 3rem;
   row-gap: 7rem;
 }
 
@@ -462,8 +452,39 @@ left: 4rem;
 
 
 /*=============== ABOUT ===============*/
+.about{
+ background-color: var(--container-color); 
+}
 
+.about__container{
+  row-gap: 2rem;
+  margin-bottom: 2rem;
+}
+.about__data{
+  position: relative;
+  text-align: center;
+}
+.about__data .about__title{
+  margin-bottom: 1rem;
+}
 
+}
+.about__description{
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.about__sticker{
+  width: 40px;
+  position: absolute;
+  right: 0;
+  bottom: 2rem;
+}
+.about__image{
+  width: 320px;
+  justify-self: center;
+  filter: var(--shadow-big-img);
+}
 /*=============== POPULAR ===============*/
 
 
