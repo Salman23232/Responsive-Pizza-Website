@@ -32,10 +32,10 @@ if (navClose) {
 /*=============== ADD SHADOW HEADER ===============*/
 const scrollHeader = () =>{
   const header = document.getElementById('header')
-  this.scrollY >=50? header.classList.add('shadow-lg') : header.classList.remove('shadow-lg')
+  this.scrollY >=50? header.classList.add('shadow-header') : header.classList.remove('shadow-header')
 }
 
-window.addEventListener('scroll', scrollHeader)
+window.addEventListener('scroll', scrollHeader())
 
 
 /*=============== SWIPER POPULAR ===============*/
