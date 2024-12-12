@@ -7,9 +7,10 @@ const navLink = document.querySelectorAll("#nav-link")
 if (navToggle) {
   navToggle.addEventListener("click", () =>
     navMenu.classList.add("show-menu")
-  );
+);
 }
 
+/*=============== REMOVE MENU MOBILE ===============*/
 if (navClose) {
   navClose.addEventListener("click", () =>
     navMenu.classList.remove("show-menu")
@@ -26,9 +27,16 @@ if (navClose) {
     
 }
 }
-/*=============== REMOVE MENU MOBILE ===============*/
+
 
 /*=============== ADD SHADOW HEADER ===============*/
+const scrollHeader = () =>{
+  const header = document.getElementById('header')
+  this.scrollY >=50? header.classList.add('shadow-lg') : header.classList.remove('shadow-lg')
+}
+
+window.addEventListener('scroll', scrollHeader)
+
 
 /*=============== SWIPER POPULAR ===============*/
 
